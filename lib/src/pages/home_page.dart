@@ -50,7 +50,6 @@ class _HomePageState extends State<HomePage> {
       futureString = e.toString();
     }
     scansBloc.addScan(ScanModel(value: futureString));
-    // scansBloc.addScan(ScanModel(value: 'geo:3976.1102033887933,-74.03941368570634'));
     Platform.isIOS ?
       Future.delayed(Duration(milliseconds: 750), () => launchURL(futureString)) :  
       launchURL(futureString);
